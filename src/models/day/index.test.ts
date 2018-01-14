@@ -7,9 +7,7 @@ import { MonthType } from "@models/monthType";
 import { Year } from "@models/year";
 
 describe('Day', () => {
-    describe('ctor', () => {
-        it('creates day', () => {
-            assert.isNotNull(new Month(MonthType.January, new Year(2017)));
-        });
+    it('ctor creates day', () => {
+        assert.isNotNull(new Month(MonthType.January, new Year(2017)));
     });
 });

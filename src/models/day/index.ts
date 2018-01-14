@@ -1,6 +1,7 @@
 import * as Ensure from "@utils/ensure";
-import { tryCacheGet } from "@utils/tryCacheGet";
-import { Month, MonthType } from "@models/month";
+import { cacheProp } from "@decs/cacheProp";
+import { Month } from "@models/month";
+import { MonthType } from "@models/monthType";
 import { DayOfWeek } from "@models/dayOfWeek";
 import { getDayOfWeek } from "@ops/getDayOfWeek";
 
@@ -9,8 +10,6 @@ export class Day {
         Ensure.notNull(value, month);
     }
 
-    private _dayOfWeek: DayOfWeek;
-    get dayOfWeek(): DayOfWeek {
-        return tryCacheGet(this._dayOfWeek, () => getDayOfWeek(this));
-    }
+    @cacheProp<Day, DayOfWeek>(target => getDayOfWeek(target))
+    dayOfWeek: DayOfWeek;
 }

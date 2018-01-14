@@ -1,5 +1,8 @@
-export function tryCacheGet<T>(cache: T, action: () => T) {
-    if (cache == null)
-        cache = action();
-    return cache;
+export function tryCacheGet<T>(cache: T, getAction: () => T, cacheAction: (value: T) => void) {
+    if (cache != undefined)
+        return cache;
+
+    const result = getAction();
+    cacheAction(result);
+    return result;
 }
