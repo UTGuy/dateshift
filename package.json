@@ -1,0 +1,29 @@
+{
+  "name": "dateshift",
+  "version": "1.0.0",
+  "description": "Better, faster Node and Browser dates and times",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec -r ts-node/register -r tsconfig-paths/register src/**/*.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UTGuy/dateshift.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UTGuy/dateshift/issues"
+  },
+  "homepage": "https://github.com/UTGuy/dateshift#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^2.2.46",
+    "benchmark": "^2.1.4",
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0",
+    "ts-node": "^4.1.0",
+    "tsconfig-paths": "^3.1.1",
+    "typescript": "^2.6.2"
+  }
+}

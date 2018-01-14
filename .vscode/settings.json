@@ -1,0 +1,5 @@
+{
+    "mocha.files.glob": "src/**/*.ts",
+    "mocha.requires": ["ts-node/register", "tsconfig-paths/register"],
+    "typescript.tsdk": "./node_modules/typescript/lib"
+}
